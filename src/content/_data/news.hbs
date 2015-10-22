@@ -1,0 +1,9 @@
+---
+layout: "news_source.hbs"
+options : {ext : ".json"}
+---
+{{#withSort news 'data.posted'}}{{#each this.pages}}<story>
+  <title>{{ this.data.title}}</title>
+  <desc>{{ this.data.sm_desc}}</desc>
+  <link>news/{{this.filename}}</link>
+  </story>{{/each}}{{/withSort}}
